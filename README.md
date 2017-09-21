@@ -1,85 +1,32 @@
-# Basic Backend Developer Interview
+# Assignment Results
+<h3>Framework(Codeignitor)</h3>
 
-Dear candidate, please follow this readme and solve all questions.
+I use Codeignitor as a framework to make this assignment. Basically I work with Codeignitor, Yii, Laravel and unfortunately not with Symphony.
+This assignment is important for me so i use the framework for which i am much experienced. However It takes me 4 to 5 days to be familier with Symphony and then i can use that also. 
+I have zipped the files and upload as project.zip
 
-> Before you can start, you should prepare your development environment.
+# Tasks
+<h3>1. Specify a default controller</h3>
+Before you start you need to create a dummy database only and no tables.
+After setting the application at your server, access the base url and you will see these results.
 
-**This test requires:**
-- access to the internet
-- your favourite IDE
-- (PHP) working dev environment with PHP 7 and symfony 3.x
-- (Node) working dev environment with Node.js LTS
-- database (MongoDB, Postgres, MySQL)
-- nginx or alternative simple dev web server
+<h3>2. Use the api.nasa.gov</h3>
+Yes i used this API and it fetch records for last 3 days.
 
-**Good luck!**
+<h3>3. Write a command</h3>
+All points under this section are done. please asccess the url (http://base_url/neo) and you will see the results. 
+It will create the table and insert all asteriod records into the database and also show you total count of asteriods.
+
+<h3>4. Create a route /neo/hazardous </h3>
+yes please now access the same url and it will return the hazardous asteroid records.
+
+<h3>5. Create a route /neo/fastest?hazardous=(true|false)</h3>
+Yes please acess the url as listed, and it will show 2 fastest asteriod record based on query parameter "hazardous" and by default hazardous = false.
 
 
---------
+<h3>6. Create a route /neo/best-year?hazardous=(true|false)</h3>
+I have done this, but i guess we have a small problem here, i am fetching records for last 3 days, so it will be the same month and same year. 
+I guess it needs to be named as "Best Day". I have done this and it shows day with most asteriod based on query parameter "hazardous".
 
-
-## Test tasks:
-
-**NOTE:** You are free to use any framework you wish. Bonus points for an explanation of your choice.
-
-1. Specify a default controller
-  - for route `/`
-  - with a proper json return `{"hello":"world!"}`
-
-2. Use the api.nasa.gov
-  - the API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
-  - documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
-  
-3. Write a command
-  - to request the data from the last 3 days from nasa api
-  - response contains count of Near-Earth Objects (NEOs)
-  - persist the values in your DB
-  - Define the model as follows:
-    - date
-    - reference (neo_reference_id)
-    - name
-    - speed (kilometers_per_hour)
-    - is hazardous (is_potentially_hazardous_asteroid)
-
-4. Create a route `/neo/hazardous`
-  - display all DB entries which contain potentially hazardous asteroids
-  - format JSON
-
-5. Create a route `/neo/fastest?hazardous=(true|false)`
-  - analyze all data
-  - calculate and return the model of the fastest asteroid
-  - with a hazardous parameter, where `true` means `is hazardous`
-  - default hazardous value is `false`
-  - format JSON
-
-6. Create a route `/neo/best-year?hazardous=(true|false)`
-  - analyze all data
-  - calculate and return a year with most asteroids
-  - with a hazardous parameter, where `true` means `is hazardous`
-  - default hazardous value is `false`
-  - format JSON
-
-7. Create a route `/neo/best-month?hazardous=(true|false)`
-  - analyze all data
-  - calculate and return a month with most asteroids (not a month in a year)
-  - with a hazardous parameter, where `true` means `is hazardous`
-  - default hazardous value is `false`
-  - format JSON
-   
-## Additional Instructions
-
-- Fork this repository
-- Tests are not optional
-- (PHP) Symfony is the expected framework
-- After you're done, provide us the link to your repository.
-- Leave comments where you were not sure how to properly proceed.
-- Implementations without a README will be automatically rejected.
-
-## Bonus Points
-
-- Clean code!
-- Knowledge of application flow.
-- Knowledge of modern best practices/coding patterns.
-- Componential thinking.
-- Knowledge of Docker.
-- Usage of MongoDB as persistance storage.
+<h3>7. Create a route /neo/best-month?hazardous=(true|false)</h3>
+I have not done this, becasue As stated above for last 3 days, it will be the same month. 
